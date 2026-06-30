@@ -51,3 +51,28 @@ Definición de x_ij = 1: Professional skill profile group i is officially alloca
 Interpretación de x_ij = 0: Professional skill profile group i is not allocated to regional economic hub j.
 
 Matriz de scoreColumnas usadas: Regional Median Monthly Salary and Aggregate Job Vacancy Volume.Fórmula exacta de $S_{ij}$:$$S_{ij} = 0.5 \cdot \text{Normalized}(\text{Salary}_{ij}) + 0.5 \cdot \text{Normalized}(\text{Vacancy}_{ij})$$Explicación: The formula creates a composite suitability index normalized between 0.0 and 10.0. It balances regional market demand (vacancy volume) with financial compensation (salary), rewarding matches where both indices are optimally aligned.Matriz de compatibilidad $S$ (4x4):
+
+
+
+## Matriz de Score
+
+**Columnas usadas:** Regional Median Monthly Salary and Aggregate Job Vacancy Volume.
+
+**Fórmula exacta de \(S_{ij}\):**
+
+$$
+S_{ij} = 0.5 \cdot \mathrm{Normalized}(\mathrm{Salary}_{ij}) +
+0.5 \cdot \mathrm{Normalized}(\mathrm{Vacancy}_{ij})
+$$
+
+**Explicación:**  
+The formula creates a composite suitability index normalized between **0.0** and **10.0**. It balances regional market demand (vacancy volume) with financial compensation (salary), rewarding matches where both indices are optimally aligned.
+
+**Matriz de compatibilidad \(S\) (4×4):**
+
+|             | B1 (Nuevo Leon) | B2 (Jalisco) | B3 (Queretaro) | B4 (Quintana Roo) |
+|-------------|----------------:|-------------:|---------------:|------------------:|
+| **A1 (Data Analyst)** | 7.0 | 8.5 | 6.0 | 4.5 |
+| **A2 (Logistics Operator)** | 9.0 | 6.5 | 8.0 | 3.5 |
+| **A3 (Customer Service Lead)** | 5.5 | 6.0 | 5.0 | 9.5 |
+| **A4 (Software Developer)** | 7.5 | 9.5 | 7.0 | 3.0 |
