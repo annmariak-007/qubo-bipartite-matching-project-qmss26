@@ -50,10 +50,6 @@ Definición de x_ij = 1: Professional skill profile group i is officially alloca
 
 Interpretación de x_ij = 0: Professional skill profile group i is not allocated to regional economic hub j.
 
-Matriz de scoreColumnas usadas: Regional Median Monthly Salary and Aggregate Job Vacancy Volume.Fórmula exacta de $S_{ij}$:$$S_{ij} = 0.5 \cdot \text{Normalized}(\text{Salary}_{ij}) + 0.5 \cdot \text{Normalized}(\text{Vacancy}_{ij})$$Explicación: The formula creates a composite suitability index normalized between 0.0 and 10.0. It balances regional market demand (vacancy volume) with financial compensation (salary), rewarding matches where both indices are optimally aligned.Matriz de compatibilidad $S$ (4x4):
-
-
-
 ## Matriz de Score
 
 **Columnas usadas:** Regional Median Monthly Salary and Aggregate Job Vacancy Volume.
@@ -76,3 +72,145 @@ The formula creates a composite suitability index normalized between **0.0** and
 | **A2 (Logistics Operator)** | 9.0 | 6.5 | 8.0 | 3.5 |
 | **A3 (Customer Service Lead)** | 5.5 | 6.0 | 5.0 | 9.5 |
 | **A4 (Software Developer)** | 7.5 | 9.5 | 7.0 | 3.0 |
+
+## Restricciones
+
+**Restricción de fila (Row Constraint):**
+
+$$
+\sum_{j} x_{ij} = 1
+$$
+
+Each professional profile in **A** must be matched to **exactly one** regional hub in **B**.
+
+---
+
+**Restricción de columna (Column Constraint):**
+
+$$
+\sum_{i} x_{ij} = 1
+$$
+
+Each regional hub in **B** must accept **exactly one** professional profile from **A**.
+
+---
+
+## Justificación de Bipartito
+
+The problem requires a **one-to-one assignment** between two distinct sets (**Workers** $\rightarrow$ **Regions**) without allowing pairings within the same set. Therefore, it is a classical **bipartite matching** problem that can be naturally formulated as a **QUBO (Quadratic Unconstrained Binary Optimization)** model and solved using both classical optimization and **QAOA**.
+
+---
+
+## Resultados
+
+### Exact Classical Solution
+
+**Optimal Bitstring**
+
+```
+[Insert the optimal bitstring from your notebook output]
+```
+
+**Optimal Energy**
+
+```
+[Insert the minimum energy]
+```
+
+---
+
+### Local QAOA Result
+
+**Best Sampled Bitstring**
+
+```
+[Insert the top sampled bitstring from your QAOA output]
+```
+
+**Best Sampled Energy**
+
+```
+[Insert the corresponding energy]
+```
+
+---
+
+## Classical vs. Local QAOA Comparison
+
+Compare the optimal solution obtained using exhaustive classical search with the best solution obtained by Local QAOA.
+
+- **Classical optimum energy:** [Insert value]
+- **Local QAOA energy:** [Insert value]
+- **Do both methods reach the same optimum?** Yes / No
+
+**Analysis**
+
+If both methods produce the same minimum energy and bitstring (or an equivalent optimal assignment), the Local QAOA successfully reproduces the classical optimum for this 4×4 bipartite matching instance. Any discrepancy indicates that the variational optimization did not fully converge or became trapped in a local optimum.
+
+---
+
+## Ética y Limitaciones
+
+### Riesgos éticos
+
+This project uses **aggregated and anonymized employment data** describing professional roles and regional labor-market indicators. No personally identifiable information (PII), sensitive personal data, or contact information was collected, stored, or processed.
+
+### Medidas de mitigación
+
+- The dataset consists entirely of aggregated public statistics.
+- No individual workers are identified or tracked.
+- The optimization is performed on job-role and regional-level information only, preserving privacy and reducing ethical risks.
+
+### Limitaciones del modelo
+
+The current implementation is a **4 × 4** proof-of-concept designed to demonstrate the formulation of a bipartite matching problem as a **QUBO (Quadratic Unconstrained Binary Optimization)** model.
+
+While the methodology scales conceptually, larger real-world instances involving thousands of workers and regions would require significantly greater computational resources. Classical exact methods become increasingly expensive, while current quantum hardware and QAOA simulations are limited by the exponential growth of the quantum state space (\(2^N\)).
+
+### Biases
+
+The dataset was constructed from publicly available government employment statistics. Although these sources are considered reliable, they may underrepresent informal employment sectors or rapidly changing labor-market conditions. Consequently, the optimization may favor regions and occupations that are better represented in official datasets.
+
+---
+
+# Ejecución
+
+## Instrucciones para Google Colab
+
+1. Open the notebook in Google Colab.
+2. Click **Runtime → Run all**.
+3. The notebook automatically downloads the dataset from the GitHub repository.
+4. The QUBO matrix is generated.
+5. Classical validation is executed.
+6. Local QAOA optimization is performed.
+7. The final matching solution and energy distributions are displayed.
+
+---
+
+## Error-Free Execution Guide
+
+The notebook has been designed to execute from start to finish without manual configuration.
+
+Before running, verify that:
+
+- ✅ The GitHub repository is public.
+- ✅ `data/dataset_real_4x4.csv` exists in the repository.
+- ✅ The dataset contains the required columns:
+  - `a_id`
+  - `b_id`
+  - `score`
+  - `a_nombre`
+  - `b_nombre`
+
+Simply select:
+
+**Runtime → Run all**
+
+The notebook will automatically load the dataset, construct the QUBO Hamiltonian, validate the classical optimum, execute the Local QAOA algorithm, and generate the corresponding visualizations and results.
+
+
+
+
+## Ethical Considerations
+
+This project uses **aggregated public data** describing regional employment indicators. No personally identifiable information (PII) or individual-level records were collected, stored, or analyzed. The optimization model assigns professional profiles to regional hubs using aggregated statistics only, ensuring compliance with basic privacy and ethical data-handling principles.
