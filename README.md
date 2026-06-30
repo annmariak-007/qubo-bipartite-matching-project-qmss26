@@ -3,15 +3,15 @@
 
 ## **Dataset**
 
-*  Nombre del dataset: Data México Employment and Industry Survey Subinstance
+Nombre del dataset: Data México Employment and Industry Survey Subinstance
 
-* Fuente oficial o confiable: Data México Portal
+Fuente oficial o confiable: Data México Portal
 
-* Institución responsable: Secretaría de Economía / INEGI
+Institución responsable: Secretaría de Economía / INEGI
 
-* URL de la fuente: https://datamexico.org
+URL de la fuente: https://datamexico.org
 
-* Raw URL of the CSV used in data: https://raw.githubusercontent.com/annmariak-007/qubo-bipartite-matching-project-qmss26/refs/heads/main/data/dataset_real_4x4.csv
+Raw URL of the CSV used in data: https://raw.githubusercontent.com/annmariak-007/qubo-bipartite-matching-project-qmss26/refs/heads/main/data/dataset_real_4x4.csv
 
 Licencia o condiciones de uso: Creative Commons Attribution 4.0 International
 
@@ -20,29 +20,29 @@ Fecha de consulta: 2026-06-30
 Dominio del problema: Urban Employment & Regional Talent Allocation
 
 
-Modelado
+## **Modelado**
 
 Conjunto A (Set A - Entities): 4 Specialized Professional Skill Profiles.
 
-A1: Data Analyst
+* A1: Data Analyst
 
-A2: Logistics Operator
+* A2: Logistics Operator
 
-A3: Customer Service Lead
+* A3: Customer Service Lead
 
-A4: Software Developer
+* A4: Software Developer
 
 Criterio para elegir exactamente 4 elementos de A: Selection based on the highest-growth employment volume indices reported in the primary technical service sector categories
 
 Conjunto B (Set B - Entities): 4 Mexican Industrial State Regions.
 
-B1: Nuevo León (Industrial Hub)
+* B1: Nuevo León (Industrial Hub)
 
-B2: Jalisco (Tech/Software Hub)
+* B2: Jalisco (Tech/Software Hub)
 
-B3: Querétaro (Aerospace Hub)
+* B3: Querétaro (Aerospace Hub)
 
-B4: Quintana Roo (Tourism Hub)
+* B4: Quintana Roo (Tourism Hub)
 
 Criterio para elegir exactamente 4 elementos de B: Selection based on representative economic diversity across four key geographic industrial ecosystems in Mexico.
 
