@@ -3,7 +3,7 @@
 
 ## **Dataset**
 
-Nombre del dataset: Data México Employment and Industry Survey Subinstance
+** Nombre del dataset ** : Data México Employment and Industry Survey Subinstance
 
 Fuente oficial o confiable: Data México Portal
 
@@ -173,15 +173,15 @@ The dataset was constructed from publicly available government employment statis
 
 ---
 
-# Ejecución
+## Ejecución
 
-## Instrucciones para Google Colab
+### Instrucciones para Google Colab
 
 Click the badge at the top of the readme to launch.
 
 ---
 
-## Error-Free Execution Guide
+### Error-Free Execution Guide
 
 Select  **Runtime → Run all**. The script is designed to process the CSV automatically and generate the QUBO Hamiltonian and resulting energy histograms without intermediate setup required.
 
