@@ -153,6 +153,9 @@ While the methodology scales conceptually, larger real-world instances involving
 
 The dataset was constructed from publicly available government employment statistics. Although these sources are considered reliable, they may underrepresent informal employment sectors or rapidly changing labor-market conditions. Consequently, the optimization may favor regions and occupations that are better represented in official datasets.
 
+### Disclaimer
+This project is for educational purposes only. It should not be used to make real decisions regarding health, transplants, housing, employment, safety, public support, or resource allocation.
+
 ---
 
 ## Ejecución
