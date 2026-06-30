@@ -115,9 +115,7 @@ And the Optimal Bitstring is [0010100000010100]
 
 ### Local QAOA Result
 
-The local QAOA simulation observed a best energy of -34.0 (matching the classical optimum) with a score of 34.0.
-
-**Best Sampled Bitstring** : [Insert the top sampled bitstring from your QAOA output]
+The local QAOA simulation observed a best energy of -34.0 (matching the classical optimum) with a score of 34.0. The ideal probability of observing this exact classical optimum is approximately 0.000849, while the ideal probability of obtaining a feasible solution is approximately 0.019667.
 
 ---
 
