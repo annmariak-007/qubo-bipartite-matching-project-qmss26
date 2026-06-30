@@ -104,48 +104,32 @@ The problem requires a **one-to-one assignment** between two distinct sets (**Wo
 ## Resultados
 
 ### Exact Classical Solution
-
-**Optimal Bitstring**
-
-```
-[Insert the optimal bitstring from your notebook output]
-```
-
-**Optimal Energy**
-
-```
-[Insert the minimum energy]
-```
+The best classical solution has an energy of -34.0 and a score of 34.0. The optimal assignment found was:
+* A1 to B3
+* A2 to B1
+* A3 to B4
+* A4 to B2
+And the Optimal Bitstring is [0010100000010100]
 
 ---
 
 ### Local QAOA Result
 
-**Best Sampled Bitstring**
+The local QAOA simulation observed a best energy of -34.0 (matching the classical optimum) with a score of 34.0.
 
-```
-[Insert the top sampled bitstring from your QAOA output]
-```
-
-**Best Sampled Energy**
-
-```
-[Insert the corresponding energy]
-```
+**Best Sampled Bitstring** : [Insert the top sampled bitstring from your QAOA output]
 
 ---
 
-## Classical vs. Local QAOA Comparison
+### Classical vs. Local QAOA Comparison:
 
-Compare the optimal solution obtained using exhaustive classical search with the best solution obtained by Local QAOA.
-
-- **Classical optimum energy:** [Insert value]
-- **Local QAOA energy:** [Insert value]
-- **Do both methods reach the same optimum?** Yes / No
+- **Classical optimum energy:** -34
+- **Local QAOA energy:** -34
+- **Do both methods reach the same optimum?** Yes. In this small instance, the local QAOA simulation successfully identified the classical optimum (energy -34.0). However, the probability of sampling this solution is low, highlighting the need for optimization and potentially post-processing or hybrid techniques for larger instances.
 
 **Analysis**
 
-If both methods produce the same minimum energy and bitstring (or an equivalent optimal assignment), the Local QAOA successfully reproduces the classical optimum for this 4×4 bipartite matching instance. Any discrepancy indicates that the variational optimization did not fully converge or became trapped in a local optimum.
+If both methods produce the same bitstring (or an equivalent optimal assignment), the Local QAOA successfully reproduces the classical optimum for this 4×4 bipartite matching instance. Any discrepancy indicates that the variational optimization did not fully converge or became trapped in a local optimum.
 
 ---
 
