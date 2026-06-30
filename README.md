@@ -1,9 +1,9 @@
 # qubo-bipartite-matching-project-qmss26
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/annmariak-007/qubo-bipartite-matching-project-qmss26/blob/main/Ann_QMSS26_Final_Project.ipynb)
 
-Dataset
+##Dataset
 
-Nombre del dataset: Data México Employment and Industry Survey Subinstance
+*First Nombre del dataset: Data México Employment and Industry Survey Subinstance
 
 Fuente oficial o confiable: Data México Portal
 
@@ -153,7 +153,7 @@ If both methods produce the same minimum energy and bitstring (or an equivalent 
 
 ### Riesgos éticos
 
-This project uses **aggregated and anonymized employment data** describing professional roles and regional labor-market indicators. No personally identifiable information (PII), sensitive personal data, or contact information was collected, stored, or processed.
+This project uses **aggregated and anonymized employment data** describing professional roles and regional labor-market indicators. No personally identifiable information (PII), sensitive personal data, or contact information was collected, stored, or processed. The optimization model assigns professional profiles to regional hubs using aggregated statistics only, ensuring compliance with basic privacy and ethical data-handling principles.
 
 ### Medidas de mitigación
 
@@ -185,6 +185,3 @@ Click the badge at the top of the readme to launch.
 
 Select  **Runtime → Run all**. The script is designed to process the CSV automatically and generate the QUBO Hamiltonian and resulting energy histograms without intermediate setup required.
 
-## Ethical Considerations
-
-This project uses **aggregated public data** describing regional employment indicators. No personally identifiable information (PII) or individual-level records were collected, stored, or analyzed. The optimization model assigns professional profiles to regional hubs using aggregated statistics only, ensuring compliance with basic privacy and ethical data-handling principles.
