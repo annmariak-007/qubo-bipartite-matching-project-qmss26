@@ -177,39 +177,13 @@ The dataset was constructed from publicly available government employment statis
 
 ## Instrucciones para Google Colab
 
-1. Open the notebook in Google Colab.
-2. Click **Runtime → Run all**.
-3. The notebook automatically downloads the dataset from the GitHub repository.
-4. The QUBO matrix is generated.
-5. Classical validation is executed.
-6. Local QAOA optimization is performed.
-7. The final matching solution and energy distributions are displayed.
+Click the badge at the top of the readme to launch.
 
 ---
 
 ## Error-Free Execution Guide
 
-The notebook has been designed to execute from start to finish without manual configuration.
-
-Before running, verify that:
-
-- ✅ The GitHub repository is public.
-- ✅ `data/dataset_real_4x4.csv` exists in the repository.
-- ✅ The dataset contains the required columns:
-  - `a_id`
-  - `b_id`
-  - `score`
-  - `a_nombre`
-  - `b_nombre`
-
-Simply select:
-
-**Runtime → Run all**
-
-The notebook will automatically load the dataset, construct the QUBO Hamiltonian, validate the classical optimum, execute the Local QAOA algorithm, and generate the corresponding visualizations and results.
-
-
-
+Select  **Runtime → Run all**. The script is designed to process the CSV automatically and generate the QUBO Hamiltonian and resulting energy histograms without intermediate setup required.
 
 ## Ethical Considerations
 
