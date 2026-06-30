@@ -3,15 +3,15 @@
 
 ## **Dataset**
 
-* First Nombre del dataset: Data México Employment and Industry Survey Subinstance
+*  Nombre del dataset: Data México Employment and Industry Survey Subinstance
 
-Fuente oficial o confiable: Data México Portal
+* Fuente oficial o confiable: Data México Portal
 
-Institución responsable: Secretaría de Economía / INEGI
+* Institución responsable: Secretaría de Economía / INEGI
 
-URL de la fuente: https://datamexico.org
+* URL de la fuente: https://datamexico.org
 
-Raw URL of the CSV used in data: https://raw.githubusercontent.com/annmariak-007/qubo-bipartite-matching-project-qmss26/refs/heads/main/data/dataset_real_4x4.csv
+* Raw URL of the CSV used in data: https://raw.githubusercontent.com/annmariak-007/qubo-bipartite-matching-project-qmss26/refs/heads/main/data/dataset_real_4x4.csv
 
 Licencia o condiciones de uso: Creative Commons Attribution 4.0 International
 
